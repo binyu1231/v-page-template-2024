@@ -5,7 +5,8 @@
 <template>
   <div class="signin">
     <!-- -->
-    signin
+    <h1 class="text-xl font-700">登录</h1>
+    signin 
   </div>
 </template>
 

@@ -6,7 +6,12 @@ defineOptions({
 </script>
 
 <template>
-  <div>
-  
+  <div class="flex gap-2">
+    <RouterLink to="/access/signin">
+      <div class="btn">登录</div>
+    </RouterLink>
+    <RouterLink to="/business/insight">
+      <div class="btn">商业洞察</div>
+    </RouterLink>
   </div>
 </template>
