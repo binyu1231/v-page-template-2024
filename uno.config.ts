@@ -2,12 +2,11 @@ import {
   defineConfig,
   presetAttributify,
   presetIcons,
+  presetTypography,
   presetUno,
-  presetWebFonts,
 } from 'unocss'
 
 import transformerDirectives from '@unocss/transformer-directives'
-
 
 export default defineConfig({
   theme: {
@@ -59,25 +58,22 @@ export default defineConfig({
   rules: [
     ['font-noto', { 'font-family':'noto'}],
     ['font-inter', { 'font-family':'inter, noto'}],
+    
+    ['animate-endless', { 'animation': 'endless 20s linear infinite' }],
+    ['animate-shine', { 'animation':'shine 5s linear 500ms infinite'}],
+    ['animate-float', { 'animation':'float 2s ease-in-out infinite'}],
+
   ],
   
   shortcuts: [
-    ['btn', 'px-4 py-1 rounded-xs inline-block bg-blue-600 text-white cursor-pointer hover:bg-blue-700 disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50'],
-    ['icon-btn', 'text-[0.9em] inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100 hover:text-teal-600 !outline-none'],
   ],
   presets: [
+    presetTypography(),
     presetUno(),
     presetAttributify(),
     presetIcons({
       scale: 1.2,
       warn: true,
-    }),
-    presetWebFonts({
-      // fonts: {
-      //   sans: 'DM Sans',
-      //   serif: 'DM Serif Display',
-      //   mono: 'DM Mono',
-      // },
     }),
   ],
   transformers: [

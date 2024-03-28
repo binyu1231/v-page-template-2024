@@ -1,12 +1,24 @@
+/* Additional styles */
+@import './additional-styles/utility-patterns.css';
+@import './additional-styles/theme.css';
+
 @font-face {
     font-family: inter;
-    src: url('@/assets/fonts/Inter.ttf');
+    src: url('~/assets/fonts/Inter.ttf');
 }
 
 @font-face {
     font-family: noto;
-    src: url('@/assets/fonts/NotoSansMonoCJKsc-Regular.ttf');
+    src: url('~/assets/fonts/NotoSansMonoCJKsc-Regular.ttf');
 }
+
+/* Additional Tailwind directives: https://tailwindcss.com/docs/functions-and-directives/#responsive */
+@layer utilities {
+    .rtl {
+        direction: rtl;
+    }
+}
+
 
 body {
   @apply font-noto;

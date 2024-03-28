@@ -1,5 +1,3 @@
-/// <reference types="vitest" />
-
 import Shiki from '@shikijs/markdown-it'
 import Vue from '@vitejs/plugin-vue'
 import LinkAttributes from 'markdown-it-link-attributes'
@@ -93,9 +91,4 @@ export default defineConfig({
       },
     }),
   ],
-
-  // https://github.com/vitest-dev/vitest
-  test: {
-    environment: 'jsdom',
-  },
 })

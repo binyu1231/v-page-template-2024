@@ -7,6 +7,23 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    BrandCard: typeof import('./components/BrandCard.vue')['default']
+    BrandList: typeof import('./components/BrandList.vue')['default']
+    Button: typeof import('./components/Button.vue')['default']
+    Checkbox: typeof import('./components/Checkbox.vue')['default']
+    copy: typeof import('./components/GradientHead copy.vue')['default']
+    FormInput: typeof import('./components/FormInput.vue')['default']
+    FormLabel: typeof import('./components/FormLabel.vue')['default']
+    GlassButton: typeof import('./components/GlassButton.vue')['default']
+    GradientColorText: typeof import('./components/GradientColorText.vue')['default']
+    GradientHead: typeof import('./components/GradientHead.vue')['default']
+    Highlighter: typeof import('./components/Highlighter.vue')['default']
+    HighlighterItem: typeof import('./components/HighlighterItem.vue')['default']
+    HighlighterItem02: typeof import('./components/HighlighterItem02.vue')['default']
+    HyperLink: typeof import('./components/HyperLink.vue')['default']
+    PageContainer: typeof import('./components/PageContainer.vue')['default']
+    PageHeader: typeof import('./components/PageHeader.vue')['default']
+    Particles: typeof import('./components/Particles.vue')['default']
     README: typeof import('./components/README.md')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
