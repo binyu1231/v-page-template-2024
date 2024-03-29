@@ -51,7 +51,9 @@
       </svg>
     </div>
     <PageHeader />
-    <slot></slot>
+    <div class="relative z-10 flex-1 overflow-y-auto">
+      <slot></slot>
+    </div>
   </div>
 </template>
 
@@ -60,6 +62,6 @@
   animation: endless 20s linear infinite;
 }
 .cp-page-container {
-  @apply w-full;
+  @apply w-full h-100vh flex flex-col overflow-hidden;
 }
 </style>

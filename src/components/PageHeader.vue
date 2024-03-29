@@ -14,10 +14,10 @@ function signout() {
     <!-- -->
     <div class="flex w-full">
       <div class="cp-page-header-title">
-        <GradientHead :level="3">
+        <GradientHead :level="3" class="text-nowrap">
           数据洞察系统
         </GradientHead>
-        <GradientColorText class="text-xl font-700">
+        <GradientColorText class="text-xl font-700 text-nowrap">
           Business Insight System
         </GradientColorText>
       </div>

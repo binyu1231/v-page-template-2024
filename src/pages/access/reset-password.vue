@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 const router = useRouter()
 
-function signin() {
-  router.replace('/')
+function changePassword() {
+  router.replace('/access/signin')
 }
 </script>
 
@@ -79,7 +79,7 @@ function signin() {
                 </div>
               </div>
               <div class="mt-6">
-                <Button @click="signin">
+                <Button @click="changePassword" class="w-full">
                   确认修改
                 </Button>
               </div>

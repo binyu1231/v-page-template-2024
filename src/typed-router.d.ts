@@ -21,7 +21,6 @@ declare module 'vue-router/auto-routes' {
     '/[...all]': RouteRecordInfo<'/[...all]', '/:all(.*)', { all: ParamValue<true> }, { all: ParamValue<false> }>,
     '/access/reset-password': RouteRecordInfo<'/access/reset-password', '/access/reset-password', Record<never, never>, Record<never, never>>,
     '/access/signin': RouteRecordInfo<'/access/signin', '/access/signin', Record<never, never>, Record<never, never>>,
-    '/business/insight': RouteRecordInfo<'/business/insight', '/business/insight', Record<never, never>, Record<never, never>>,
     '/dashboard': RouteRecordInfo<'/dashboard', '/dashboard', Record<never, never>, Record<never, never>>,
     '/database': RouteRecordInfo<'/database', '/database', Record<never, never>, Record<never, never>>,
     '/docs/background': RouteRecordInfo<'/docs/background', '/docs/background', Record<never, never>, Record<never, never>>,

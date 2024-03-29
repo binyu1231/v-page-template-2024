@@ -4,11 +4,12 @@ withDefaults(
     brandIndex?: number
     title: string
     enTitle: string
-    count: number
+    count?: number | string
     unit: string
   }>(),
   {
-    brandIndex: 1
+    brandIndex: 1,
+    count: '--',
   }
 )
 </script>
@@ -28,12 +29,12 @@ withDefaults(
     <div class="flex p-3 pr-6 h-full gap-2">
       <img :src="`/carousel-icon-0${brandIndex}.svg`" width="56" height="56" alt="Icon 01">
       <div class="grow">
-        <div class="font-bold text-lg mb-1">{{ title }}</div>
-        <GradientColorText class="font-700">{{ enTitle }}</GradientColorText>
+        <div class="font-bold text-lg mb-1 text-nowrap">{{ title }}</div>
+        <GradientColorText class="font-700 text-nowrap">{{ enTitle }}</GradientColorText>
       </div>
-      <div class="flex items-end gap-1">
-        <div class="text-4xl font-700">{{ count }}</div>
-        <div class="mb-2 text-slate-4 font-700 text-lg">{{ unit }}</div>
+      <div class="flex items-center gap-1">
+        <div class="lg:text-xl xl:text-2xl 2xl:text-4xl text-base font-700">{{ count }}</div>
+        <div class="xl:pt-1 2xl:pt-2 text-base text-slate-4 font-700 lg:text-lg">{{ unit }}</div>
       </div>
     </div>
   </div>
@@ -43,10 +44,11 @@ withDefaults(
 .cp-brand-card {
   @apply
   relative 
-            h-full 
-            border-1
-            border-gray-700
-      
-            bg-slate-900 bg-opacity-60 rounded-[inherit] z-20 overflow-hidden;
+  h-full 
+  border-1
+  rounded-lg
+  border-gray-700
+  overflow-hidden
+  bg-slate-900 bg-opacity-60 z-20 overflow-hidden;
 }
 </style>

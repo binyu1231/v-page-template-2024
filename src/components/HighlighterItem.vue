@@ -14,7 +14,6 @@ defineOptions({
   @apply
     relative
     h-full 
-    rounded-3xl 
     p-px 
     overflow-hidden
   ;

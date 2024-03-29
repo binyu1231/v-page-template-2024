@@ -73,7 +73,7 @@ function signin() {
                   <FormLabel for="text" icon="ant-design:user-outlined">
                     用户名
                   </FormLabel>
-                  <input id="text" class="form-input w-full" type="text" required />
+                  <FormInput id="text" type="text" required />
                 </div>
                 <div>
                   <div class="flex justify-between">
@@ -87,7 +87,7 @@ function signin() {
               </div>
             </form>
             <div class="mt-6">
-                <Button @click="signin">
+                <Button @click="signin" class="w-full">
                   登录
                 </Button>
               </div>
