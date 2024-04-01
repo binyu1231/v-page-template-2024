@@ -17,11 +17,11 @@ const data = ref(Array.from({ length: 10 }).map((_, i) => {
   }, { date: '2024/03/29' })
 }))
 
-console.log(data)
 columns.value.unshift({ name: 'Date', key: 'date' as any })
 
 const useStatus = ref(true)
 const groupValue = ref('1')
+const selectedDateRange = ref<Date[]>([])
 
 </script>
 
@@ -38,12 +38,19 @@ const groupValue = ref('1')
                 Date
               </FormLabel>
               <div>
-                <div>
+                <div class="flex gap-2">
                   <select id="referrer" class=" form-select text-sm py-2 shadow shadow-[0_0_4px_0_#a855f7]" required>
                     <option>Google</option>
                     <option>Medium</option>
                     <option>GitHub</option>
                   </select>
+
+                  <RangeDatepicker 
+                    v-model="selectedDateRange" 
+                    placeholder="请选择日期"
+                    />
+
+                    <!-- :default-value="[new Date(new Date().setDate(new Date().getDate() - 6)), new Date()]"  -->
                 </div>
               </div>
 

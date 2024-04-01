@@ -28,18 +28,30 @@ const btnClassName = computed(() => {
 
 <style lang="postcss">
 .cp-button {
-  @apply text-sm text-white bg-purple-500  hover:bg-purple-600 shadow-sm transition duration-150 ease-in-out;
+  @apply 
+    text-sm 
+    text-white 
+    bg-purple-500  
+    hover:bg-purple-600 
+    shadow-sm 
+    transition 
+    duration-150 
+    ease-in-out;
 }
 
 .cp-button.lite {
-  @apply text-slate-900 bg-gradient-to-r from-white/80 via-white to-white/80 hover:bg-white;
+  @apply 
+  text-slate-900 
+  bg-gradient-to-r 
+  from-white/80 
+  via-white 
+  to-white/80 
+  hover:bg-white;
 }
 
 .cp-button-arrow {
   @apply tracking-normal text-purple-300 transition-transform duration-150 ease-in-out ml-1;
 }
 
-{
-  @apply text-purple-500;
-}
+
 </style>

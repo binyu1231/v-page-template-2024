@@ -1,6 +1,7 @@
 /* Additional styles */
 @import './additional-styles/utility-patterns.css';
 @import './additional-styles/theme.css';
+@import './additional-styles/flatpickr.css';
 
 @font-face {
     font-family: inter;

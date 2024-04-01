@@ -12,7 +12,8 @@ withDefaults(
 </script>
 
 <template>
-  <div class="cp-glass-button btn-sm group" :class="{ active }">
+  <div class="cp-glass-button" :class="{ active }">
+    <div class="cp-glass-button-inner btn-sm group" :class="{ active }">
     <!-- -->
     <span class="relative inline-flex items-center">
       <slot></slot>
@@ -22,11 +23,20 @@ withDefaults(
     </span>
     
   </div>
+  </div>
 
 </template>
 
 <style lang="postcss">
 .cp-glass-button {
+  @apply inline-flex relative;
+}
+
+.cp-glass-button.active::before {
+  content: "";
+  @apply absolute inset-0 bg-purple-500 blur-md;
+}
+.cp-glass-button-inner {
   @apply 
     text-slate-300 
     hover:text-white 
@@ -41,15 +51,20 @@ withDefaults(
       _theme(colors.slate.700)_75%,
       _theme(colors.slate.400)_100%)_border-box
     ]  */
-    relative 
-    before:absolute 
-    before:inset-0 
-    before:bg-slate-800/30 
-    before:rounded-full 
-    before:pointer-events-none;
+    relative;
 }
 
-.cp-glass-button.active {
+.cp-glass-button-inner::before {
+  content: "";
+  @apply
+    absolute 
+    inset-0 
+    bg-slate-800/30 
+    rounded-full 
+    pointer-events-none;
+}
+
+.cp-glass-button-inner.active {
   
   @apply
     [background:linear-gradient(theme(colors.purple.500),_theme(colors.purple.500))_padding-box,_linear-gradient(theme(colors.purple.500),_theme(colors.purple.200)_75%,_theme(colors.transparent)_100%)_border-box] 
@@ -61,9 +76,13 @@ withDefaults(
     _theme(colors.transparent)_100%)_border-box
     ]  
     */
-            before:bg-purple-500 
-              before:blur-md
-    before:bg-slate-800/50 
+             
     shadow;
+}
+
+.cp-glass-button-inner.active::before {
+  @apply 
+    blur-md
+  bg-slate-800;
 }
 </style>
