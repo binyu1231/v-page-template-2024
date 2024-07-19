@@ -1,6 +1,6 @@
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 
-export default function useMousePosition() {
+export function useMousePosition() {
   const mousePosition = ref({ x: 0, y: 0 })
 
   const handleMouseMove = (event: MouseEvent) => {

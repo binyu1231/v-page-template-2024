@@ -29,7 +29,7 @@ withDefaults(
 
 <style lang="postcss">
 .cp-glass-button {
-  @apply inline-flex relative;
+  @apply inline-flex relative select-none;
 }
 
 .cp-glass-button.active::before {
