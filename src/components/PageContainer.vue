@@ -51,7 +51,7 @@
       </svg>
     </div>
     <PageHeader />
-    <div class="relative z-10 flex-1 overflow-y-auto">
+    <div class="relative flex flex-col z-10 flex-1 overflow-y-auto">
       <slot></slot>
     </div>
   </div>

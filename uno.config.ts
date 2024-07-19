@@ -4,9 +4,8 @@ import {
   presetIcons,
   presetTypography,
   presetUno,
+  transformerDirectives
 } from 'unocss'
-
-import transformerDirectives from '@unocss/transformer-directives'
 
 export default defineConfig({
   theme: {
